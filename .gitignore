@@ -1,0 +1,8 @@
+.obsidian/
+.makemd/
+
+*.log
+*.md~
+node_modules/
+*.bak
+
