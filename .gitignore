@@ -1,5 +1,8 @@
 .obsidian/
 .makemd/
+.trash/
+.space/
+person/grade_meeting/
 
 *.log
 *.md~
