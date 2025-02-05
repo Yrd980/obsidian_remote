@@ -2,6 +2,7 @@
 .makemd/
 .trash/
 .space/
+img/
 person/grade_meeting/
 
 *.log
