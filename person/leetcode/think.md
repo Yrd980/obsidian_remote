@@ -2,6 +2,26 @@
 
 ## hash
 
+### twosum
+
+1. this problem involves a single loop. Then condition for judgment is _map.containsKey()_. There is no _else_ statement; instead,it directly uses map.put();
+
+```java
+
+    public static int[] twoSum(int[] nums, int target) {
+      Map<Integer,Integer> map = new HashMap<>();
+      for(int i = 0 ; i < nums.length ; i++) {
+          int complement = target - nums[i];
+          if(map.containsKey(complement)){
+              return new int[] {map.get(complement),i};
+          }
+          map.put(nums[i],i);
+    }
+    throw new IllegalArgumentException("No two sum solution");
+    }
+
+```
+
 ### groupAnagrams
 
 1. data structure use Stringbuilder::new Stringbuilder::appendCodePoint Stringbuilder::append
@@ -22,7 +42,7 @@
    }
 ```
 
-### longestConsecutive
+### ongestConsecutive
 
 1. use set dataset
 2. analyse is set.contains() run O(1) time complexity
@@ -49,26 +69,6 @@
     }
     return longestStreak;
   }
-
-```
-
-### twosum
-
-1. this problem involves a single loop. Then condition for judgment is _map.containsKey()_. There is no _else_ statement; instead,it directly uses map.put();
-
-```java
-
-    public static int[] twoSum(int[] nums, int target) {
-      Map<Integer,Integer> map = new HashMap<>();
-      for(int i = 0 ; i < nums.length ; i++) {
-          int complement = target - nums[i];
-          if(map.containsKey(complement)){
-              return new int[] {map.get(complement),i};
-          }
-          map.put(nums[i],i);
-    }
-    throw new IllegalArgumentException("No two sum solution");
-    }
 
 ```
 
@@ -190,7 +190,7 @@ nums[j++] = tmp
     return ans;
   }
 
-	```
+ ```
 
 ## slideWindow
 
@@ -199,7 +199,7 @@ nums[j++] = tmp
 1. data structure use set
 2. assign right pointer r = -1
 3. if i!=0 occ.remove(s.charAt(i-1)) move slideWindow
-4. then while loop r + 1 < n 
+4. then while loop r + 1 < n
 
 ```java
   public int lengthOfLongestSubstring(String s) {
@@ -1429,3 +1429,337 @@ public static ListNode swapPairs(ListNode head) {
     return dummy.next;
   }
 ```
+
+### reverseKGroup
+
+1. for loop i < k - 1
+2. reverseKGroup(cur,k) just recursion
+
+```java
+
+  public static ListNode reverseKGroup(ListNode head, int k) {
+    ListNode currentNode = head;
+    int nodeCount = 0;
+    while (currentNode != null) {
+      nodeCount++;
+      currentNode = currentNode.next;
+    }
+    if (nodeCount < k) {
+      return head;
+    }
+    ListNode pre = head;
+    ListNode cur = head.next;
+    for (int i = 0; i < k - 1; i++) {
+      ListNode next = cur.next;
+      cur.next = pre;
+      pre = cur;
+      cur = next;
+    }
+    head.next = reverseKGroup(cur, k);
+    return pre;
+  }
+}
+```
+
+### copyRandomList
+
+use HashMap then just assign
+
+```java
+
+  public Node copyRandomList(Node head) {
+    if (head == null) {
+      return null;
+    }
+    Node cur = head;
+    HashMap<Node, Node> map = new HashMap<>();
+    while (cur != null) {
+      map.put(cur, new Node(cur.val));
+      cur = cur.next;
+    }
+    cur = head;
+    while (cur != null) {
+      map.get(cur).next = map.get(cur.next);
+      map.get(cur).random = map.get(cur.random);
+      cur = cur.next;
+    }
+    return map.get(head);
+  }
+}
+```
+
+### sortList
+
+1. imitate sort find middle then merge
+2. findMiddle use slow and fast pointer so loop condition is fast.next != null and fast.next.next != null
+3. attention interupt connection of middle aka middle.next = null
+
+```java
+
+  public static ListNode sortList(ListNode head) {
+    if (head == null || head.next == null) {
+      return head;
+    }
+    ListNode middle = findMiddle(head);
+    ListNode rightHead = middle.next;
+    middle.next = null;
+    ListNode l = sortList(head);
+    ListNode r = sortList(rightHead);
+    return mergeTwolists(l, r);
+  }
+
+  private static ListNode findMiddle(ListNode head) {
+    ListNode slow = head;
+    ListNode fast = head.next;
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+    return slow;
+  }
+
+  private static ListNode mergeTwolists(ListNode l1, ListNode l2) {
+    ListNode dummy = new ListNode(-1);
+    ListNode cur = dummy;
+    while (l1 != null && l2 != null) {
+      if (l1.val < l2.val) {
+        cur.next = l1;
+        l1 = l1.next;
+      } else {
+        cur.next = l2;
+        l2 = l2.next;
+      }
+      cur = cur.next;
+    }
+
+    if (l1 != null) {
+      cur.next = l1;
+    }
+
+    if (l2 != null) {
+      cur.next = l2;
+    }
+
+    return dummy.next;
+  }
+```
+
+### mergeKLists
+
+1. use PriorityQueue
+2. first assign just array head
+
+```java
+
+  public static ListNode mergeKLists(ListNode[] lists) {
+
+    PriorityQueue<ListNode> pq = new PriorityQueue<>(((o1, o2) -> {
+      return o1.val - o2.val;
+    }));
+
+    for (ListNode node : lists) {
+      if (node != null) {
+        pq.offer(node);
+      }
+    }
+    ListNode dummy = new ListNode(-1);
+    ListNode cur = dummy;
+    while (!pq.isEmpty()) {
+      ListNode s = pq.poll();
+      cur.next = s;
+      cur = cur.next;
+      s = s.next;
+      if (s != null) {
+        pq.offer(s);
+      }
+    }
+    return dummy.next;
+  }
+```
+
+### LRUCache
+
+1. use double list
+2. lru use moveToHead to remove tail
+
+```java
+
+public class LRUCache {
+  class DlinkedNode {
+    int key;
+    int val;
+    DlinkedNode pre;
+    DlinkedNode next;
+
+    public DlinkedNode() {
+    }
+
+    public DlinkedNode(int key, int val, DlinkedNode pre, DlinkedNode next) {
+      this.key = key;
+      this.val = val;
+      this.pre = pre;
+      this.next = next;
+    }
+  }
+
+  private HashMap<Integer, DlinkedNode> map;
+  DlinkedNode head;
+  DlinkedNode tail;
+  private final int capacity;
+  private int size;
+
+  public LRUCache(int capacity) {
+    this.map = new HashMap<>(capacity);
+    this.capacity = capacity;
+    this.size = 0;
+    this.head = new DlinkedNode();
+    this.tail = new DlinkedNode();
+    this.head.next = this.tail;
+    this.tail.pre = this.head;
+  }
+
+  public int get(int key) {
+    DlinkedNode node = map.get(key);
+    if (node != null) {
+      moveToHead(node);
+      return node.val;
+    }
+    return -1;
+  }
+
+  public void put(int key, int val) {
+    DlinkedNode node = map.get(key);
+    if (node != null) {
+      node.val = val;
+      moveToHead(node);
+    } else {
+      if (size + 1 > capacity) {
+        DlinkedNode tailPre = tail.pre;
+        tailPre.pre.next = tail;
+        tail.pre = tailPre.pre;
+        map.remove(tailPre.key);
+      } else {
+        size++;
+      }
+      DlinkedNode headNext = head.next;
+      DlinkedNode newNode = new DlinkedNode(key, val, head, head.next);
+      head.next = newNode;
+      headNext.pre = newNode;
+      map.put(key, newNode);
+    }
+  }
+
+  public void moveToHead(DlinkedNode node) {
+    DlinkedNode next = node.next;
+    DlinkedNode pre = node.pre;
+    pre.next = next;
+    next.pre = pre;
+    DlinkedNode headNext = head.next;
+    node.pre = head;
+    node.next = headNext;
+    head.next = node;
+    headNext.pre = node;
+  }
+}
+```
+
+## Tree
+
+### inorderTraversal
+
+considering stack so right middle left
+
+```java
+
+  public List<Integer> inorderTraversal(TreeNode root) {
+    int WHITE = 0, GRAY = 1;
+    List<Integer> res = new ArrayList<>();
+    Stack<Object[]> stack = new Stack<>();
+    stack.push(new Object[] { WHITE, root });
+    while (!stack.isEmpty()) {
+      Object[] colorNodePair = stack.pop();
+      int color = (int) colorNodePair[0];
+      TreeNode node = (TreeNode) colorNodePair[1];
+      if (node == null) {
+        continue;
+      }
+      if (color == WHITE) {
+        stack.push(new Object[] { WHITE, node.right });
+        stack.push(new Object[] { GRAY, node });
+        stack.push(new Object[] { WHITE, node.left });
+      } else {
+        res.add(node.val);
+      }
+    }
+    return res;
+  }
+
+```
+
+### maxDepth
+
+bfs
+
+```java
+
+  public int maxDepth (TreeNode root) {
+    if(root == null) {
+      return 0;
+    } else {
+      int leftHight = maxDepth(root.left);
+      int rightHight = maxDepth(root.right);
+      return Math.max(leftHight, rightHight)+1;
+    }
+  }
+
+```
+
+dfs
+
+```java
+
+  public int maxDepth(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    int ans = 0;
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      while (size > 0) {
+        TreeNode node = queue.poll();
+        if (node.left != null) {
+          queue.offer(node.left);
+        }
+        if (node.right != null) {
+          queue.offer(node.right);
+        }
+        size--;
+      }
+      ans++;
+    }
+    return ans;
+  }
+}
+```
+
+### invertTree
+
+left is temporary storage 
+
+```java
+
+  public TreeNode invertTree(TreeNode root) {
+    if (root == null) {
+      return null;
+    }
+    TreeNode left = invertTree(root.left);
+    TreeNode right = invertTree(root.right);
+    root.left = right;
+    root.right = left;
+    return root;
+  }
+```
+
+### isSymmetric
