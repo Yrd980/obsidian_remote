@@ -1763,3 +1763,239 @@ left is temporary storage 
 ```
 
 ### isSymmetric
+
+only use if for boundary condition ensuring p and q all equal null
+
+```java
+
+  public boolean isSymmetric(TreeNode root) {
+    return check(root.left, root.right);
+  }
+
+  public boolean check(TreeNode p, TreeNode q) {
+    if (p == null && q == null) {
+      return true;
+    }
+    if (p == null || q == null) {
+      return false;
+    }
+    return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
+  }
+```
+
+### diameterOfBinaryTree
+
+problem is diameter so max is passway root rather than just left height + rigth height
+
+```java
+
+  int ans;
+
+  public int diameterOfBinaryTree(TreeNode root) {
+    ans = 1;
+    depth(root);
+    return ans - 1;
+  }
+
+  public int depth(TreeNode node) {
+    if (node == null) {
+      return 0;
+    }
+    int l = depth(node.left);
+    int r = depth(node.right);
+    ans = Math.max(ans, l + r + 1);
+    return Math.max(l, r) + 1;
+  }
+```
+
+### levelOrder
+
+just dfs
+
+```java
+
+  public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> ret = new ArrayList<>();
+    if (root == null) {
+      return ret;
+    }
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      List<Integer> level = new ArrayList<>();
+      int size = queue.size();
+      while (size > 0) {
+        TreeNode node = queue.poll();
+        level.add(node.val);
+        if (node.left != null) {
+          queue.offer(node.left);
+        }
+        if (node.right != null) {
+          queue.offer(node.right);
+        }
+        size--;
+      }
+      ret.add(level);
+    }
+    return ret;
+  }
+```
+
+### sortedArrayToBST
+
+bold to recursion
+
+```java
+
+  public TreeNode sortedArrayToBST(int[] nums) {
+    return helper(nums, 0, nums.length-1);
+  }
+
+  public TreeNode helper(int[] nums, int left, int right) {
+    if (left > right) {
+      return null;
+    }
+    int mid = left + (right - left) >> 2;
+    TreeNode root = new TreeNode(nums[mid]);
+    root.left = helper(nums, left, mid - 1);
+    root.right = helper(nums, mid + 1, right);
+    return root;
+  }
+```
+
+### isValidBST
+
+recursion
+
+```java
+
+  public boolean isValidBST(TreeNode root) {
+    return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
+  }
+
+  public boolean isValidBST(TreeNode node, long lower, long upper) {
+    if (node == null) {
+      return true;
+    }
+    if (node.val <= lower || node.val >= upper) {
+      return false;
+    }
+    return isValidBST(node.left, lower, node.val) && isValidBST(node.right, node.val, upper);
+  }
+```
+
+use stack
+
+```java
+
+  public boolean isValidBST(TreeNode root) {
+    Deque<TreeNode> stack = new LinkedList<>();
+    double inorder = -Double.MAX_VALUE;
+    while (!stack.isEmpty() || root != null) {
+      while (root != null) {
+        stack.push(root);
+        root = root.left;
+      }
+      root = stack.pop();
+      if (root.val <= inorder) {
+        return false;
+      }
+      inorder = root.val;
+      root = root.right;
+    }
+    return true;
+  }
+```
+
+### kthSmallest
+
+treat it as ascending array so we should use count then use left to find
+
+```java
+
+  public int kthSmallest(TreeNode root, int k) {
+    int leftNodes = countNodes(root.left);
+    if (leftNodes < k - 1) {
+      return kthSmallest(root.right, k - leftNodes - 1);
+    } else if (leftNodes == k - 1) {
+      return root.val;
+    } else {
+      return kthSmallest(root.left, k);
+    }
+  }
+
+  public int countNodes(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+    int leftNodes = countNodes(root.left);
+    int rightNodes = countNodes(root.right);
+    return leftNodes + rightNodes + 1;
+  }
+```
+
+### rightSideView
+
+bfs since is stack so first left then right
+
+```java
+
+  public List<Integer> rightSideView(TreeNode root) {
+    Map<Integer, Integer> rightmostValueAtDepth = new HashMap<>();
+    int max_depth = -1;
+    Deque<TreeNode> nodeStack = new LinkedList<>();
+    Deque<Integer> depthStack = new LinkedList<>();
+    nodeStack.push(root);
+    depthStack.push(0);
+    while (!nodeStack.isEmpty()) {
+      TreeNode node = nodeStack.pop();
+      int depth = depthStack.pop();
+      if (node != null) {
+        max_depth = Math.max(max_depth, depth);
+        if (!rightmostValueAtDepth.containsKey(depth)) {
+          rightmostValueAtDepth.put(depth, node.val);
+        }
+        nodeStack.push(node.left);
+        nodeStack.push(node.right);
+        depthStack.push(depth + 1);
+        depthStack.push(depth + 1);
+      }
+    }
+    List<Integer> rigthView = new ArrayList<>();
+    for (int depth = 0; depth <= max_depth; depth++) {
+      rigthView.add(rightmostValueAtDepth.get(depth));
+    }
+    return rigthView;
+  }
+```
+
+dfs just override to ensure the rightmostValueAtDepth is last element aka right node so don't like bfs judge contains
+
+```java
+
+  public List<Integer> rightSideView(TreeNode root) {
+    Map<Integer, Integer> rightmostValueAtDepth = new HashMap<>();
+    int max_depth = -1;
+    Queue<TreeNode> nodeQueue = new LinkedList<>();
+    Queue<Integer> depthQueue = new LinkedList<>();
+    nodeQueue.add(root);
+    depthQueue.add(0);
+    while (!nodeQueue.isEmpty()) {
+      TreeNode node = nodeQueue.remove();
+      int depth = depthQueue.remove();
+      if (node != null) {
+        max_depth = Math.max(max_depth, depth);
+        rightmostValueAtDepth.put(depth, node.val);
+        nodeQueue.add(node.left);
+        nodeQueue.add(node.right);
+        depthQueue.add(depth + 1);
+        depthQueue.add(depth + 1);
+      }
+    }
+    List<Integer> rightView = new ArrayList<>();
+    for (int depth = 0; depth <= max_depth; depth++) {
+      rightView.add(rightmostValueAtDepth.get(depth));
+    }
+    return rightView;
+  }
+```
