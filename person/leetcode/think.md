@@ -1999,3 +1999,64 @@ dfs just override to ensure the rightmostValueAtDepth is last element aka right 
     return rightView;
   }
 ```
+
+### flatten
+
+just tranversal still recursion
+
+```java
+
+ public void flatten(TreeNode root) {
+    if (root == null) {
+      return;
+    }
+    subflatten(root);
+  }
+
+  public TreeNode subflatten(TreeNode root) {
+    TreeNode left = root.left;
+    TreeNode right = root.right;
+    TreeNode last = root;
+    root.left = null;
+    if (left != null) {
+      root.right = left;
+      last = subflatten(left);
+    }
+    if (right != null) {
+      last.right = right;
+      last = subflatten(right);
+    }
+    return last;
+  }
+}
+```
+
+### buildTree
+
+use in and stop to find bifurcation
+
+```java
+
+  private int pre = 0;
+  private int in = 0;
+
+  public TreeNode buildTree(int[] preorder, int[] inorder) {
+    return buildTree(preorder, inorder, Integer.MAX_VALUE + 1);
+  }
+
+  public TreeNode buildTree(int[] preorder, int[] inorder, long stop) {
+    if (pre == preorder.length) {
+      return null;
+    }
+    if (inorder[in] == stop) {
+      in++;
+      return null;
+    }
+    int val = preorder[pre];
+    pre++;
+    TreeNode root = new TreeNode(val);
+    root.left = buildTree(preorder, inorder, val);
+    root.right = buildTree(preorder, inorder, stop);
+    return root;
+  }
+```
