@@ -304,6 +304,8 @@ nums[j++] = tmp
 
 ## substring
 
+### subarraySum
+
 8. use two loop second condition is --end;
 9. before i think j pointer is necessary while loop for finding
 cur+nums[j] == k but test cases show the 0 is essential but it
@@ -1698,7 +1700,7 @@ considering stack so right middle left
 
 ### maxDepth
 
-bfs
+bfs return function to calculate result
 
 ```java
 
@@ -1714,7 +1716,7 @@ bfs
 
 ```
 
-dfs
+dfs level tranversal
 
 ```java
 
@@ -1843,7 +1845,7 @@ just dfs
 
 ### sortedArrayToBST
 
-bold to recursion
+brave to recursion
 
 ```java
 
@@ -1884,7 +1886,7 @@ recursion
   }
 ```
 
-use stack
+inorder tranversal mean left < root < right so just set inorder equal stack.pop()
 
 ```java
 
@@ -2058,5 +2060,120 @@ use in and stop to find bifurcation
     root.left = buildTree(preorder, inorder, val);
     root.right = buildTree(preorder, inorder, stop);
     return root;
+  }
+
+```
+
+### pathSum
+
+store prefix sum is similar substring subarraySum
+
+```java
+
+  private int ans;
+
+  public int pathSum(TreeNode root, int targetSum) {
+    Map<Long, Integer> cnt = new HashMap<>();
+    cnt.put(0L, 1);
+    dfs(root, 0, targetSum, cnt);
+    return ans;
+  }
+
+  private void dfs(TreeNode node, long s, int targetSum, Map<Long, Integer> cnt) {
+    if (node == null) {
+      return;
+    }
+    s += node.val;
+    ans += cnt.getOrDefault(s - targetSum, 0);
+    cnt.merge(s, 1, Integer::sum);
+    dfs(node.left, s, targetSum, cnt);
+    dfs(node.right, s, targetSum, cnt);
+    cnt.merge(s, -1, Integer::sum);
+  }
+```
+
+### lowestCommonAncestor
+
+first judge lson and rson is current node
+second judge current is p or q then son is lson and rson
+
+```java
+
+  private TreeNode ans = null;
+
+  private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null) {
+      return false;
+    }
+    boolean lson = dfs(root.left, p, q);
+    boolean rson = dfs(root.right, p, q);
+    if ((lson && rson) || ((root.val == p.val || root.val == q.val) && (lson || rson))) {
+      ans = root;
+    }
+    return lson || rson || (root.val == p.val || root.val == q.val);
+  }
+
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    dfs(root, p, q);
+    return ans;
+  }
+```
+
+Map<Integer,TreeNode> parent node.val and node
+first parent store all tree
+then find p all ancestor use Set visited store
+finally q find visited
+
+```java
+
+  Map<Integer, TreeNode> parent = new HashMap<>();
+  Set<Integer> visited = new HashSet<>();
+
+  public void dfs(TreeNode root) {
+    if (root.left != null) {
+      parent.put(root.left.val, root);
+      dfs(root.left);
+    }
+    if (root.right != null) {
+      parent.put(root.right.val, root);
+      dfs(root.right);
+    }
+  }
+
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    dfs(root);
+    while (p != null) {
+      visited.add(p.val);
+      p = parent.get(p.val);
+    }
+    while (q != null) {
+      if (visited.contains(q.val)) {
+        return q;
+      }
+      q = parent.get(q.val);
+    }
+    return null;
+  }
+```
+
+### maxPathSum
+
+```java
+  int maxSum = Integer.MIN_VALUE;
+
+  public int maxPathSum(TreeNode root) {
+    maxGain(root);
+    return maxSum;
+  }
+
+  public int maxGain(TreeNode node) {
+    if (node == null) {
+      return 0;
+    }
+    int leftGain = Math.max(maxGain(node.left), 0);
+    int rightGain = Math.max(maxGain(node.right), 0);
+    int priceNewpath = node.val + leftGain + rightGain;
+    maxSum = Math.max(maxSum, priceNewpath);
+    return node.val + Math.max(leftGain, rightGain);
   }
 ```
