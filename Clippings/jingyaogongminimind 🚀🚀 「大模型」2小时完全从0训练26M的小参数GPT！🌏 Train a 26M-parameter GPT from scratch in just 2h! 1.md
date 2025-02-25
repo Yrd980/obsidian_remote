@@ -4,7 +4,7 @@ source: "https://github.com/jingyaogong/minimind"
 author:
   - "[[GitHub]]"
 published:
-created: 2025-02-21
+created: 2025-02-25
 description: "🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h! - jingyaogong/minimind"
 tags:
   - "clippings"
@@ -37,14 +37,14 @@ Note
 
 Models List
 
-| 模型 (大小)                 | 推理占用 (约) | Release    |
-| ----------------------- | -------- | ---------- |
-| MiniMind2-small (26M)   | 0.5 GB   | 2025.02.06 |
-| MiniMind2-MoE (145M)    | 1.0 GB   | 2025.02.06 |
-| MiniMind2 (104M)        | 1.0 GB   | 2025.02.06 |
-| minimind-v1-small (26M) | 0.5 GB   | 2024.08.28 |
-| minimind-v1-moe (4×26M) | 1.0 GB   | 2024.09.17 |
-| minimind-v1 (108M)      | 1.0 GB   | 2024.09.01 |
+| 模型 (大小) | 推理占用 (约) | Release |
+| --- | --- | --- |
+| MiniMind2-small (26M) | 0.5 GB | 2025.02.06 |
+| MiniMind2-MoE (145M) | 1.0 GB | 2025.02.06 |
+| MiniMind2 (104M) | 1.0 GB | 2025.02.06 |
+| minimind-v1-small (26M) | 0.5 GB | 2024.08.28 |
+| minimind-v1-moe (4×26M) | 1.0 GB | 2024.09.17 |
+| minimind-v1 (108M) | 1.0 GB | 2024.09.01 |
 
 **项目包含**
 
@@ -249,14 +249,14 @@ Tokenizer介绍
 
 第三方强大的开源模型例如Yi、qwen、chatglm、mistral、Llama3的tokenizer词表长度如下：
 
-| Tokenizer模型        | 词表大小    | 来源             |
-| ------------------ | ------- | -------------- |
-| yi tokenizer       | 64,000  | 01万物（中国）       |
-| qwen2 tokenizer    | 151,643 | 阿里云（中国）        |
-| glm tokenizer      | 151,329 | 智谱AI（中国）       |
-| mistral tokenizer  | 32,000  | Mistral AI（法国） |
-| llama3 tokenizer   | 128,000 | Meta（美国）       |
-| minimind tokenizer | 6,400   | 自定义            |
+| Tokenizer模型 | 词表大小 | 来源 |
+| --- | --- | --- |
+| yi tokenizer | 64,000 | 01万物（中国） |
+| qwen2 tokenizer | 151,643 | 阿里云（中国） |
+| glm tokenizer | 151,329 | 智谱AI（中国） |
+| mistral tokenizer | 32,000 | Mistral AI（法国） |
+| llama3 tokenizer | 128,000 | Meta（美国） |
+| minimind tokenizer | 6,400 | 自定义 |
 
 > 👉2024-09-17更新：为了防止过去的版本歧义&控制体积，minimind所有模型均使用minimind\_tokenizer分词，废弃所有mistral\_tokenizer版本。
 
@@ -1025,6 +1025,8 @@ Note
 [**@pengqianhan**](https://github.com/pengqianhan): [🔗一个简明教程](https://github.com/jingyaogong/minimind/issues/73)
 
 [**@RyanSunn**](https://github.com/RyanSunn): [🔗推理过程学习记录](https://github.com/jingyaogong/minimind/issues/75)
+
+[**@Nijikadesu**](https://github.com/Nijikadesu): [🔗以交互笔记本方式分解项目代码](https://github.com/jingyaogong/minimind/issues/213)
 
 **参考链接 & 感谢以下优秀的论文或项目**
 
