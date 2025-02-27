@@ -34,7 +34,26 @@ quick open file: ctrl+p
 fold sidebar: ctrl+b
 quick focus: command then focus terminal
 
+# other
+
 # moze
 
 x then  small like ょ
 double type n then ん
+
+## iwgtk
+
+check wifi password
+```shell
+ls /var/lib/iwd
+```
+
+## pacman
+
+mannul install
+```shell
+yay -G package
+then cd and cat PKGBUILD
+sha512sums file
+makepkg -si
+```
