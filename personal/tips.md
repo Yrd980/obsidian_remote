@@ -1,3 +1,6 @@
+> [!important] shortcuts
+> command palette can hint it
+
 # obsidian
 
 ## common shortkeys
@@ -44,14 +47,14 @@ double type n then ん
 ## iwgtk
 
 check wifi password
-```shell
+```bash
 ls /var/lib/iwd
 ```
 
 ## pacman
 
 mannul install
-```shell
+```bash
 yay -G package
 then cd and cat PKGBUILD
 sha512sums file
