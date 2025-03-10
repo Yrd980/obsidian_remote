@@ -11,3 +11,7 @@ https://echotech.feishu.cn/wiki/BtlFwx2BUiVmV6kq0nccRG4xn8d
 
 https://t16jzwqrzjx.feishu.cn/wiki/EsvowFAqFiTiYDkJgE0cWquPnWb?from=from_copylink
 ![[Pasted image 20250306123006.png]]
+
+### AGI掘金知识库
+https://agijuejin.feishu.cn/wiki/WT4awNhDEiAEObkiXDpcDiMVnjd
+![[Pasted image 20250310103606.png]]
