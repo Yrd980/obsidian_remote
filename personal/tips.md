@@ -54,6 +54,7 @@ ls /var/lib/iwd
 ## pacman
 
 mannul install
+
 ```bash
 yay -G package
 then cd and cat PKGBUILD
