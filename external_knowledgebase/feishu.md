@@ -19,3 +19,7 @@ https://agijuejin.feishu.cn/wiki/WT4awNhDEiAEObkiXDpcDiMVnjd
 ### waytoagi
 https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e
 ![[Pasted image 20250314121620.png]]
+
+### AI bot
+https://rcnv1t9vps13.feishu.cn/wiki/JiQowaSe1itt07kyVvZcHFcQnee
+![[Pasted image 20250314192415.png]]
