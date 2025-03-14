@@ -49,6 +49,7 @@
 | Combination              | $\binom{n}{k}$                | `$\binom{n}{k}$`                |     |
 | Permutation              | $P(n, k) = \frac{n!}{(n-k)!}$ | `$P(n, k) = \frac{n!}{(n-k)!}$` |     |
 | Multiplication Principle | $m \times n$                  | `$m \times n$`                  |     |
+|                          |                               |                                 |     |
 
 #### **6. Recurrence Relations**  
 | Description    | Formula                   | Markdown Code               |     |

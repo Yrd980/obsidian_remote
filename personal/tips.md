@@ -61,3 +61,12 @@ then cd and cat PKGBUILD
 sha512sums file
 makepkg -si
 ```
+
+## python
+
+**uv** instead **conda**
+
+torch (cpu)
+```shell
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```

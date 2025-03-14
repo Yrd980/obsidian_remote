@@ -15,3 +15,7 @@ https://t16jzwqrzjx.feishu.cn/wiki/EsvowFAqFiTiYDkJgE0cWquPnWb?from=from_copylin
 ### AGI掘金知识库
 https://agijuejin.feishu.cn/wiki/WT4awNhDEiAEObkiXDpcDiMVnjd
 ![[Pasted image 20250310103606.png]]
+
+### waytoagi
+https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e
+![[Pasted image 20250314121620.png]]
