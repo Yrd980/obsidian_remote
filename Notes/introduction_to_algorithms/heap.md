@@ -6,7 +6,7 @@
 | ---------- | --------------------------- |
 | height     | $h = \lg \lfloor n \rfloor$ |
 | build_heap | $O(n)$                      |
-| max_heap | $O( \lg n)$                      |
+| max_heap   | $O( \lg n)$                 |
 | heap_sort  | $O(n \lg n)$                |
 
 ## proof

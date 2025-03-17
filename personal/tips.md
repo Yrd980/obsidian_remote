@@ -5,7 +5,6 @@
 
 ## common shortkeys
 
-terminal : ctrl + p
 quick find file: ctrl + o
 quick delete file : use command  terminal then choose delete current file
 open outline: in command palette: enter outline
@@ -57,9 +56,16 @@ mannul install
 
 ```bash
 yay -G package
-then cd and cat PKGBUILD
-sha512sums file
+updpkgsums
 makepkg -si
+```
+
+yay occur curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+
+the error occurs because yay is trying to resume a partial download of the Elasticsearch package, but the server does not support byte ranges, leading to a failure.
+
+```shell
+yay -Scc
 ```
 
 ## python
@@ -70,3 +76,7 @@ torch (cpu)
 ```shell
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
+
+### Hp printer
+
+[Arch install](https://unix.stackexchange.com/questions/359531/installing-hp-printer-driver-for-arch-linux)
