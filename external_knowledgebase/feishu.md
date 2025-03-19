@@ -2,7 +2,7 @@
 
 ### 逐篇讲解DeepSeek关键9篇论文及创新点——“勇敢者的游戏”
 
-https://www.bilibili.com/video/BV1xuK5eREJi/
+[bilibili vedio](https://www.bilibili.com/video/BV1xuK5eREJi/)
 https://echotech.feishu.cn/wiki/BtlFwx2BUiVmV6kq0nccRG4xn8d
 
 ![[Pasted image 20250306122738.png]]
@@ -22,4 +22,4 @@ https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e
 
 ### AI bot
 https://rcnv1t9vps13.feishu.cn/wiki/JiQowaSe1itt07kyVvZcHFcQnee
-![[Pasted image 20250314192415.png]]
+![[Pasted image 20250314192437.png]]

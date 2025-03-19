@@ -1,82 +1,121 @@
-> [!important] shortcuts
-> command palette can hint it
 
-# obsidian
+# [!important] Shortcuts & Commands
 
-## common shortkeys
+## Obsidian
 
-quick find file: ctrl + o
-quick delete file : use command  terminal then choose delete current file
-open outline: in command palette: enter outline
-disable spell check:  go settings then editer find spell check
+### Common Shortcuts
+- **Quick find file:** `Ctrl + O`
+- **Quick delete file:** Open command palette, search `Delete current file`
+- **Open outline:** Open command palette, enter `Outline`
+- **Disable spell check:** Go to `Settings` → `Editor` → Disable `Spell check`
 
-## plugins
+### Plugins
+- **Git**
+- **Linter**
 
-git
-linter
+### Git Commands
+- **Remove Ignored Files from Git Tracking:**
+  ```sh
+  git rm -r --cached .
+  ```
+- **Export Git commit history:**
+  ```sh
+  git log --pretty=format:"%H|%an|%ad|%s" --date=iso > git-log-export.txt
+  ```
 
-# anki
+## Anki
 
-# neovim with tmux
+(No content yet)
 
-[Capitalize first letter of each word in a selection](https://stackoverflow.com/questions/17440659/capitalize-first-letter-of-each-word-in-a-selection-using-vim)
+## Neovim with Tmux
 
-```bash
-s/\<./\u&/g
-```
+- **Capitalize first letter of each word in selection:** ([Reference](https://stackoverflow.com/questions/17440659/capitalize-first-letter-of-each-word-in-a-selection-using-vim))
+  ```sh
+  s/\<./\u&/g
+  ```
+- **Document outline:** `<leader> + l + s`
+- **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
+- **Check function documentation:** `Shift + K`
 
-document ouline: leader + l + s
-specifying Full Pane in Tmux Window: leader + z recovery is same
+## VSCode
 
-check code document: capital k
+- **Quick open file:** `Ctrl + P`
+- **Fold sidebar:** `Ctrl + B`
+- **Quick focus terminal:** Open command palette, search `Focus terminal`
 
-# vscode
+## JetBrains IDEs
 
-quick open file: ctrl+p
-fold sidebar: ctrl+b
-quick focus: command then focus terminal
+### General Shortcuts
+- `Ctrl + Shift + A` → Find Action (search for commands/settings)
+- `Shift` (twice) → Search Everywhere
+- `Ctrl + E` → Recent Files
+- `Ctrl + Shift + E` → Recent Edited Files
+- `Alt + Enter` → Show Intention Actions / Quick Fix
+- `Ctrl + Space` → Basic Code Completion
+- `Ctrl + Shift + Space` → Smart Code Completion
 
-# other
+### Navigation
+- `Ctrl + N` → Go to Class
+- `Ctrl + Shift + N` → Go to File
+- `Ctrl + Alt + Shift + N` → Go to Symbol
+- `Ctrl + B` / `Ctrl + Click` → Go to Definition
+- `Ctrl + U` → Go to Super Method/Class
+- `Ctrl + [ / Ctrl + ]` → Navigate to Code Block Start/End
 
-# moze
+### Editing
+- `Ctrl + W` → Expand Selection
+- `Ctrl + Shift + W` → Shrink Selection
+- `Ctrl + D` → Duplicate Line
+- `Ctrl + Y` → Delete Line
+- `Ctrl + Shift + Up/Down` → Move Line Up/Down
+- `Ctrl + /` → Toggle Line Comment
+- `Ctrl + Shift + /` → Toggle Block Comment
 
-x then  small like ょ
-double type n then ん
+### Refactoring
+- `Shift + F6` → Rename
+- `Ctrl + Alt + V` → Extract Variable
+- `Ctrl + Alt + M` → Extract Method
+- `Ctrl + Alt + F` → Extract Field
 
-## iwgtk
+### Running & Debugging
+- `Shift + F10` → Run
+- `Shift + F9` → Debug
+- `F8` → Step Over
+- `F7` → Step Into
+- `Shift + F8` → Step Out
 
-check wifi password
-```bash
-ls /var/lib/iwd
-```
+## Other Tools
 
-## pacman
+### Moze (Japanese Input)
+- **Small characters:** Type `x` before the character (e.g., `x ょ` → `ょ`)
+- **Type ん：** Double `n`
 
-mannul install
+### iwgtk (WiFi Management)
+- **Check WiFi passwords:**
+  ```sh
+  ls /var/lib/iwd
+  ```
 
-```bash
-yay -G package
-updpkgsums
-makepkg -si
-```
+### Pacman (Arch Linux Package Manager)
 
-yay occur curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+- **Manually install a package:**
+  ```sh
+  yay -G package
+  updpkgsums
+  makepkg -si
+  ```
+- **Fix `yay` curl error (`HTTP server does not support byte ranges`):**
+  ```sh
+  yay -Scc
+  ```
 
-the error occurs because yay is trying to resume a partial download of the Elasticsearch package, but the server does not support byte ranges, leading to a failure.
+### Python
+- **Use `uv` instead of `conda`**
+- **Install PyTorch (CPU-only version):**
+  ```sh
+  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+  ```
 
-```shell
-yay -Scc
-```
+### HP Printer Setup
+- [Arch Linux Installation Guide](https://unix.stackexchange.com/questions/359531/installing-hp-printer-driver-for-arch-linux)
 
-## python
-
-**uv** instead **conda**
-
-torch (cpu)
-```shell
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-```
-
-### Hp printer
-
-[Arch install](https://unix.stackexchange.com/questions/359531/installing-hp-printer-driver-for-arch-linux)
