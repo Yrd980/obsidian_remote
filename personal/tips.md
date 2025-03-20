@@ -53,6 +53,8 @@
 - `Alt + Enter` → Show Intention Actions / Quick Fix
 - `Ctrl + Space` → Basic Code Completion
 - `Ctrl + Shift + Space` → Smart Code Completion
+- `Alt + Shift + .` → Increase font size
+- `Alt + Shift + ,` → Decrease font size
 
 ### Navigation
 - `Ctrl + N` → Go to Class
