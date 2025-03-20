@@ -86,6 +86,59 @@
 - `F7` → Step Into
 - `Shift + F8` → Step Out
 
+## MPV
+
+### **Playback Controls**
+- `SPACE` → Pause/Resume
+- `.` → Step forward one frame (pause mode)
+- `,` → Step backward one frame (pause mode)
+- `← / →` → Seek 5 seconds backward/forward
+- `↑ / ↓` → Seek 1 minute backward/forward
+- `Shift + ← / →` → Seek 1 second backward/forward
+- `Ctrl + ← / →` → Seek 10 seconds backward/forward
+- `Ctrl + ↑ / ↓` → Seek 10 minutes backward/forward
+- `Backspace` → Restart video from beginning
+
+### **Volume and Audio**
+- `9 / 0` → Decrease/Increase volume
+- `m` → Mute audio
+- `#` → Cycle through audio tracks
+
+### **Subtitles**
+- `v` → Toggle subtitles
+- `j / J` → Cycle forward/backward through subtitle tracks
+- `z / Z` → Adjust subtitle delay (-/+ 0.1 sec)
+- `r / t` → Increase/Decrease subtitle size
+
+### **Video Settings**
+- `f` → Toggle fullscreen
+- `o` → Show playback time & progress
+- `i` → Show video frame info
+- `w / e` → Decrease/Increase contrast
+- `s / d` → Decrease/Increase brightness
+- `3 / 4` → Decrease/Increase gamma
+- `5 / 6` → Decrease/Increase saturation
+- `Ctrl + s` → Take a screenshot
+- `Shift + s` → Screenshot without subtitles
+
+### **Speed Control**
+- `[` → Decrease playback speed
+- `]` → Increase playback speed
+- `{` → Halve playback speed
+- `}` → Double playback speed
+- `Backspace` → Reset playback speed
+
+### **Looping and Playlist**
+- `l` → Toggle looping current file
+- `Shift + l` → Loop AB (start/end)
+- `>` → Next file in playlist
+- `<` → Previous file in playlist
+
+### **Advanced**
+- `p` → Show playlist
+- `q` → Quit MPV
+- `Shift + q` → Quit and remember playback position
+
 ## Other Tools
 
 ### Moze (Japanese Input)
@@ -121,3 +174,8 @@
 ### HP Printer Setup
 - [Arch Linux Installation Guide](https://unix.stackexchange.com/questions/359531/installing-hp-printer-driver-for-arch-linux)
 
+### ffmpeg
+- **Merge mp4 and m4a**
+```sh
+ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
+ ```
