@@ -179,3 +179,10 @@
 ```sh
 ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
  ```
+
+### tar
+- tar.gz
+```sh
+tar -xzvf filename.tar.gz
+tar -czvf filename.tar.gz filename
+```
