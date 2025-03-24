@@ -84,49 +84,49 @@
 ---
 
 ### **Chinese-English Comparison Table (中英对照表)**  
-| English | 中文 |  
-|---------|------|  
-| Addition | 加法 |  
-| Subtraction | 减法 |  
-| Multiplication | 乘法 |  
-| Division | 除法 |  
-| Equal | 等于 |  
-| Not equal | 不等于 |  
-| Approximate | 约等于 |  
-| Less than | 小于 |  
-| Greater than | 大于 |  
-| Superscript | 上标 |  
-| Subscript | 下标 |  
-| Logical AND | 逻辑与 |  
-| Logical OR | 逻辑或 |  
-| NOT | 逻辑非 |  
-| Equivalent | 等价 |  
-| Subset | 子集 |  
-| Proper Subset | 真子集 |  
-| Union | 并集 |  
-| Intersection | 交集 |  
-| Big-O Notation | 大 O 记号 |  
-| Small-o Notation | 小 o 记号 |  
-| Omega Notation | 大 Ω 记号 |  
-| Theta Notation | 大 Θ 记号 |  
-| Factorial | 阶乘 |  
-| Combination | 组合数 |  
-| Permutation | 排列 |  
-| Multiplication Principle | 乘法原理 |  
-| Recurrence | 递归关系 |  
-| Master Theorem | 主定理 |  
-| Vector | 向量 |  
-| Matrix | 矩阵 |  
-| Determinant | 行列式 |  
-| Summation | 求和 |  
-| Product | 乘积 |  
-| Integral | 积分 |  
-| Limit | 极限 |  
-| Square Root | 平方根 |  
-| Natural Logarithm | 自然对数 |  
-| Exponential | 指数 |  
-| Floor & Ceiling | 取整（向下、向上） |  
-| Modulo | 取模 |  
+| English                  | 中文        |     |
+| ------------------------ | --------- | --- |
+| Addition                 | 加法        |     |
+| Subtraction              | 减法        |     |
+| Multiplication           | 乘法        |     |
+| Division                 | 除法        |     |
+| Equal                    | 等于        |     |
+| Not equal                | 不等于       |     |
+| Approximate              | 约等于       |     |
+| Less than                | 小于        |     |
+| Greater than             | 大于        |     |
+| Superscript              | 上标        |     |
+| Subscript                | 下标        |     |
+| Logical AND              | 逻辑与       |     |
+| Logical OR               | 逻辑或       |     |
+| NOT                      | 逻辑非       |     |
+| Equivalent               | 等价        |     |
+| Subset                   | 子集        |     |
+| Proper Subset            | 真子集       |     |
+| Union                    | 并集        |     |
+| Intersection             | 交集        |     |
+| Big-O Notation           | 大 O 记号    |     |
+| Small-o Notation         | 小 o 记号    |     |
+| Omega Notation           | 大 Ω 记号    |     |
+| Theta Notation           | 大 Θ 记号    |     |
+| Factorial                | 阶乘        |     |
+| Combination              | 组合数       |     |
+| Permutation              | 排列        |     |
+| Multiplication Principle | 乘法原理      |     |
+| Recurrence               | 递归关系      |     |
+| Master Theorem           | 主定理       |     |
+| Vector                   | 向量        |     |
+| Matrix                   | 矩阵        |     |
+| Determinant              | 行列式       |     |
+| Summation                | 求和        |     |
+| Product                  | 乘积        |     |
+| Integral                 | 积分        |     |
+| Limit                    | 极限        |     |
+| Square Root              | 平方根       |     |
+| Natural Logarithm        | 自然对数      |     |
+| Exponential              | 指数        |     |
+| Floor & Ceiling          | 取整（向下、向上） |     |
+| Modulo                   | 取模        |     |
 
 ---
 

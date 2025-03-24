@@ -6,19 +6,30 @@ feature： 流氓软件成堆、桌面凌乱
 
 shortcut:
 
+win : search software
+win + s : win + online search(edge)
 win + i : open settings
 win + e : open file explorer
 win + r : open command
 win + r then enter **control** : open control panel
 
 software recommand (no chrome account):
+- edge(default)
+- folder size explorer(check memory)
+- [snipaste](https://www.snipaste.com/download.html)(screenshot)
+- powertoys(mircosoft tool)
+
+want gmail
+
+- [sms](https://sms-activate.org/en)(message recieve)
+- [clash for windows](https://www.clashforwindows.net/clash-for-windows-download/)(for update addon)
 - firefox(browser)
-  - ublock
+  - uBlock
   - ghostery
   - privacy badger
-- folder size explorer(check memory)
-- scoop(optional)
+- scoop(optional package install)
+- brave(browser)
 
 addtion:
 
-i don't like divide c disk and d disk just keep the default like linux file system is ok
+i don't like divide c disk and d disk just keep the default like linux file system
