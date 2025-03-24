@@ -1,7 +1,7 @@
 # Partition Select
 
 ## PARTITION-AROUND Algorithm
-```sh
+```cpp
 PARTITION-AROUND(A, p, r, x)
     ixl = ⌊(p + r) / 2⌋
     ixr = ⌈(p + r) / 2⌉
@@ -22,7 +22,7 @@ PARTITION-AROUND(A, p, r, x)
 ```
 
 ## SELECT Algorithm
-```sh
+```cpp
 SELECT(A, p, r, i)
     while (r - p + 1) mod 5 ≠ 0
         for j = p + 1 to r  // put the minimum into A[p]
@@ -52,28 +52,8 @@ SELECT(A, p, r, i)
 ```
 
 ## Proof of Complexity
-Let \( T(n) \) be the worst-case runtime of SELECT for an input array \( A[p:r] \), where \( r - p + 1 \leq n \).
 
-### Step 1: Analyzing Non-Recursive Steps
-- The `while` loop (lines 1-10) runs 0 to 4 times, taking \( O(1) \).
-- The minimum search (lines 2-4) dominates, taking \( \Theta(n) \), making lines 1-10 run in \( O(n) \cdot \Theta(1) = O(n) \).
-- Sorting 5-element groups (lines 12-13) takes \( \Theta(n) \).
-- PARTITION-AROUND (line 17) runs in \( \Theta(n) \).
-- Total time: \( O(n) + \Theta(n) + \Theta(n) + \Theta(1) = \Theta(n) \).
 
-### Step 2: Analyzing Recursive Steps
-- \( g \leq n/5 \), so the recursive pivot selection (line 16) takes \( T(g) \leq T(n/5) \).
-- The partition step ensures that at most \( 7n/10 \) elements remain after partitioning.
-- Recurrence relation:
-  \[
-  T(n) \leq T(n/5) + T(7n/10) + \Theta(n)
-  \]
-
-Using substitution, we assume \( T(n) = O(n) \), which holds since the constants balance out, proving \( T(n) = \Theta(n) \).
-
-### Comparison with Comparison-Based Sorting
-- **Similarity**: Both use comparisons to determine element order.
-- **Difference**: Comparison sorts fully order the array with a lower bound of \( \Omega(n \log n) \), while SELECT solves the selection problem in \( \Theta(n) \) without full sorting.
 
 ## Additional Resources
 - [Median of Medians Algorithm](https://gist.github.com/boulethao/a15809963d326a5ad43f255fbffbf9ff)
