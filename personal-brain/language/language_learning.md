@@ -5,7 +5,7 @@ video reference
 
 summary
 
-just cost **i+1** effort to listen and read to expand the boundary of the language
+just cost **i+1** effort to listen and read to push the boundary of the language
 
 resource
 

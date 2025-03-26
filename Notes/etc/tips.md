@@ -23,6 +23,10 @@
   git log --pretty=format:"%H|%an|%ad|%s" --date=iso > git-log-export.txt
   ```
 
+## Zotero
+
+- zolit
+
 ## Anki
 
 (No content yet)
