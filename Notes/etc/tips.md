@@ -190,3 +190,8 @@ ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
 tar -xzvf filename.tar.gz
 tar -czvf filename.tar.gz filename
 ```
+### pid
+```sh
+btm # find cpu memory occupy
+htop # find detailed information
+```
