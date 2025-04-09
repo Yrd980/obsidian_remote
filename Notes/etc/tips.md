@@ -40,6 +40,7 @@
 - **Document outline:** `<leader> + l + s`
 - **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
 - **Check function documentation:** `Shift + K`
+- **search current word:** `*`
 
 ## VSCode
 
@@ -148,6 +149,7 @@
 ### Moze (Japanese Input)
 - **Small characters:** Type `x` before the character (e.g., `x ょ` → `ょ`)
 - **Type ん：** Double `n`
+- **Transform あ->ア：** f6 or shift + alt then enter
 
 ### iwgtk (WiFi Management)
 - **Check WiFi passwords:**
