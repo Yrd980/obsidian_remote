@@ -9,6 +9,8 @@
 - **Open outline:** Open command palette, enter `Outline`
 - **Disable spell check:** Go to `Settings` → `Editor` → Disable `Spell check`
 
+
+
 ### Plugins
 - **Git**
 - **Linter**
@@ -145,6 +147,10 @@
 - `Shift + q` → Quit and remember playback position
 
 ## Other Tools
+
+### rime
+
+- **change input:** Type ctrl + ` to select
 
 ### Moze (Japanese Input)
 - **Small characters:** Type `x` before the character (e.g., `x ょ` → `ょ`)
