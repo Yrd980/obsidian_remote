@@ -24,6 +24,26 @@
   ```sh
   git log --pretty=format:"%H|%an|%ad|%s" --date=iso > git-log-export.txt
   ```
+- **Initialize Git Repository:**
+  ```sh
+  git init
+  ```
+- **Add Remote Repository:**
+  ```sh
+  git remote add origin https://github.com/your-username/your-repo.git
+  ```
+- **Stage All Files:**
+  ```sh
+  git add .
+  ```
+- **Commit Changes:**
+  ```sh
+  git commit -m "Initial commit"
+  ```
+- **Push to Remote Repository (Main Branch):**
+  ```sh
+  git push -u origin main
+  ```
 
 ## Zotero
 
