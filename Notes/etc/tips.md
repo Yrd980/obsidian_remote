@@ -53,7 +53,9 @@
 
 (No content yet)
 
-## Neovim with Tmux
+## Neovim
+
+### Tmux
 
 - **Capitalize first letter of each word in selection:** ([Reference](https://stackoverflow.com/questions/17440659/capitalize-first-letter-of-each-word-in-a-selection-using-vim))
   ```sh
@@ -63,6 +65,10 @@
 - **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
 - **Check function documentation:** `Shift + K`
 - **search current word:** `*`
+
+### Plugins
+
+- **Refresh:** `:luafile %` or `:Lazy reload plugin-name` or `Lazy sync`
 
 ## VSCode
 
