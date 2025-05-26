@@ -48,6 +48,15 @@
   - go to [token](https://github.com/settings/tokens) add then set repo permission
   - after git remote set-url origin https://<NEW-TOKEN>@github.com/
 
+- **difference**
+
+| Feature        | **SSH**                                                         | **GPG**                                                |
+| -------------- | --------------------------------------------------------------- | ------------------------------------------------------ |
+| **Purpose**    | Secure login/authentication                                     | Verifying commit authorship                            |
+| **Usage**      | Used to authenticate **you** to GitHub (e.g., for pushing code) | Used to prove that **a commit** or tag was made by you |
+| **Keys**       | SSH key pair (`id_rsa` / `id_ed25519`)                          | GPG key pair (used for signing)                        |
+| **Where used** | Cloning, pushing, fetching (i.e., repository access)            | Signing commits/tags (i.e., author authenticity)       |
+
 
 ## Zotero
 
