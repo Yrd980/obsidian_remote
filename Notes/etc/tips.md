@@ -65,6 +65,7 @@
 - **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
 - **Check function documentation:** `Shift + K`
 - **search current word:** `*`
+- **use ) to move mouse outside** `)`
 
 ### Plugins
 
