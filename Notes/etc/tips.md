@@ -44,6 +44,10 @@
   ```sh
   git push -u origin main
   ```
+- **Push repo**
+  - go to [token](https://github.com/settings/tokens) add then set repo permission
+  - after git remote set-url origin https://<NEW-TOKEN>@github.com/
+
 
 ## Zotero
 
