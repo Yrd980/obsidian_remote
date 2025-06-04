@@ -5,11 +5,10 @@
 
 ### Common Shortcuts
 - **Quick find file:** `Ctrl + O`
+- **Command template:** `Ctrl + P`
 - **Quick delete file:** Open command palette, search `Delete current file`
 - **Open outline:** Open command palette, enter `Outline`
 - **Disable spell check:** Go to `Settings` → `Editor` → Disable `Spell check`
-
-
 
 ### Plugins
 - **Git**
@@ -83,6 +82,13 @@
 ### Plugins
 
 - **Refresh:** `:luafile %` or `:Lazy reload plugin-name` or `Lazy sync`
+
+## Ollama
+
+- **Update model**
+```sh
+ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating model: {}"; ollama pull {}; echo "—" && echo "All models updated."
+```
 
 ## VSCode
 
