@@ -139,6 +139,28 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 - `F7` → Step Into
 - `Shift + F8` → Step Out
 
+## Qt
+
+**gcc and clang**
+```sh
+cmake -B build -S . \
+  -DCMAKE_C_COMPILER=clang \
+  -DCMAKE_CXX_COMPILER=clang++ \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+```
+
+**#ifdef error**
+
+add .clangd
+
+```sh
+CompileFlags:
+  Remove: [-mno-direct-extern-access]
+Diagnostics:
+  ClangTidy:
+    Add: modernize-*,performance-*
+```
+
 ## MPV
 
 ### **Playback Controls**
