@@ -1,78 +1,77 @@
-### **Common Mathematical Symbols in Algorithms (Markdown + LaTeX)**  
+### **Common Mathematical Symbols in Algorithms (Markdown + LaTeX)**
 
-#### **1. Basic Arithmetic Symbols**  
-| Description           | Formula                     | Markdown Code                   |     |
-| --------------------- | --------------------------- | ------------------------------- | --- |
-| Addition              | $a + b$                     | `$a + b$`                       |     |
-| Subtraction           | $a - b$                     | `$a - b$`                       |     |
-| Multiplication        | $a \times b$ or $a \cdot b$ | `$a \times b$` or `$a \cdot b$` |     |
-| Division              | $\frac{a}{b}$               | `$\frac{a}{b}$`                 |     |
-| Equal                 | $a = b$                     | `$a = b$`                       |     |
-| Not equal             | $a \neq b$                  | `$a \neq b$`                    |     |
-| Approximate           | $a \approx b$               | `$a \approx b$`                 |     |
-| Less than             | $a < b$                     | `$a < b$`                       |     |
-| Greater than          | $a > b$                     | `$a > b$`                       |     |
-| Less than or equal    | $a \leq b$                  | `$a \leq b$`                    |     |
-| Greater than or equal | $a \geq b$                  | `$a \geq b$`                    |     |
+#### **1. Basic Arithmetic Symbols**
+| Description           | Formula                     | Markdown Code                   |
+| --------------------- | --------------------------- | ------------------------------- |
+| Addition              | $a + b$                     | `$a + b$`                       |
+| Subtraction           | $a - b$                     | `$a - b$`                       |
+| Multiplication        | $a \times b$ or $a \cdot b$ | `$a \times b$` or `$a \cdot b$` |
+| Division              | $\frac{a}{b}$               | `$\frac{a}{b}$`                 |
+| Equal                 | $a = b$                     | `$a = b$`                       |
+| Not equal             | $a \neq b$                  | `$a \neq b$`                    |
+| Approximate           | $a \approx b$               | `$a \approx b$`                 |
+| Less than             | $a < b$                     | `$a < b$`                       |
+| Greater than          | $a > b$                     | `$a > b$`                       |
+| Less than or equal    | $a \leq b$                  | `$a \leq b$`                    |
+| Greater than or equal | $a \geq b$                  | `$a \geq b$`                    |
 
-#### **2. Superscripts & Subscripts**  
-| Description                  | Formula | Markdown Code |     |
-| ---------------------------- | ------- | ------------- | --- |
-| Superscript (Exponentiation) | $x^n$   | `$x^n$`       |     |
-| Subscript                    | $a_i$   | `$a_i$`       |     |
-| Combined                     | $a_i^n$ | `$a_i^n$`     |     |
+#### **2. Superscripts & Subscripts**
+| Description                  | Formula | Markdown Code |
+| ---------------------------- | ------- | ------------- |
+| Superscript (Exponentiation) | $x^n$   | `$x^n$`       |
+| Subscript                    | $a_i$   | `$a_i$`       |
+| Combined                     | $a_i^n$ | `$a_i^n$`     |
 
-#### **3. Logic & Set Operations**  
-| Description   | Formula         | Markdown Code     |     |
-| ------------- | --------------- | ----------------- | --- |
-| Logical AND   | $A \land B$     | `$A \land B$`     |     |
-| Logical OR    | $A \lor B$      | `$A \lor B$`      |     |
-| NOT           | $\neg A$        | `$\neg A$`        |     |
-| Equivalent    | $A \iff B$      | `$A \iff B$`      |     |
-| Subset        | $A \subseteq B$ | `$A \subseteq B$` |     |
-| Proper Subset | $A \subset B$   | `$A \subset B$`   |     |
-| Union         | $A \cup B$      | `$A \cup B$`      |     |
-| Intersection  | $A \cap B$      | `$A \cap B$`      |     |
+#### **3. Logic & Set Operations**
+| Description   | Formula         | Markdown Code     |
+| ------------- | --------------- | ----------------- |
+| Logical AND   | $A \land B$     | `$A \land B$`     |
+| Logical OR    | $A \lor B$      | `$A \lor B$`      |
+| NOT           | $\neg A$        | `$\neg A$`        |
+| Equivalent    | $A \iff B$      | `$A \iff B$`      |
+| Subset        | $A \subseteq B$ | `$A \subseteq B$` |
+| Proper Subset | $A \subset B$   | `$A \subset B$`   |
+| Union         | $A \cup B$      | `$A \cup B$`      |
+| Intersection  | $A \cap B$      | `$A \cap B$`      |
 
-#### **4. Complexity Notation**  
-| Description      | Formula            | Markdown Code        |     |
-| ---------------- | ------------------ | -------------------- | --- |
-| Big-O Notation   | $O(n^2)$           | `$O(n^2)$`           |     |
-| Small-o Notation | $o(n)$             | `$o(n)$`             |     |
-| Omega Notation   | $\Omega(n \log n)$ | `$\Omega(n \log n)$` |     |
-| Theta Notation   | $\Theta(n)$        | `$\Theta(n)$`        |     |
+#### **4. Complexity Notation**
+| Description      | Formula            | Markdown Code        |
+| ---------------- | ------------------ | -------------------- |
+| Big-O Notation   | $O(n^2)$           | `$O(n^2)$`           |
+| Small-o Notation | $o(n)$             | `$o(n)$`             |
+| Omega Notation   | $\Omega(n \log n)$ | `$\Omega(n \log n)$` |
+| Theta Notation   | $\Theta(n)$        | `$\Theta(n)$`        |
 
-#### **5. Counting & Combinatorics**  
+#### **5. Counting & Combinatorics**
 | Description              | Formula                       | Markdown Code                   |     |
 | ------------------------ | ----------------------------- | ------------------------------- | --- |
 | Factorial                | $n!$                          | `$n!$`                          |     |
 | Combination              | $\binom{n}{k}$                | `$\binom{n}{k}$`                |     |
 | Permutation              | $P(n, k) = \frac{n!}{(n-k)!}$ | `$P(n, k) = \frac{n!}{(n-k)!}$` |     |
 | Multiplication Principle | $m \times n$                  | `$m \times n$`                  |     |
-|                          |                               |                                 |     |
 
-#### **6. Recurrence Relations**  
-| Description    | Formula                   | Markdown Code               |     |
-| -------------- | ------------------------- | --------------------------- | --- |
-| Recurrence     | $T(n) = 2T(n/2) + O(n)$   | `$T(n) = 2T(n/2) + O(n)$`   |     |
-| Master Theorem | $T(n) = aT(n/b) + O(n^d)$ | `$T(n) = aT(n/b) + O(n^d)$` |     |
+#### **6. Recurrence Relations**
+| Description    | Formula                   | Markdown Code               |
+| -------------- | ------------------------- | --------------------------- |
+| Recurrence     | $T(n) = 2T(n/2) + O(n)$   | `$T(n) = 2T(n/2) + O(n)$`   |
+| Master Theorem | $T(n) = aT(n/b) + O(n^d)$ | `$T(n) = aT(n/b) + O(n^d)$` |
 
-#### **7. Linear Algebra & Matrices**  
+#### **7. Linear Algebra & Matrices**
 | Description | Formula                                        | Markdown Code                                    |     |
 | ----------- | ---------------------------------------------- | ------------------------------------------------ | --- |
 | Vector      | $\mathbf{v} = (x, y, z)$                       | `$\mathbf{v} = (x, y, z)$`                       |     |
 | Matrix      | $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$ | `$\begin{bmatrix} a & b \\ c & d \end{bmatrix}$` |     |
 | Determinant | $\det(A)$                                      | `$\det(A)$`                                      |     |
 
-#### **8. Summation & Integration**  
-| Description | Formula                  | Markdown Code              |     |
+#### **8. summation & integration**
+| description | formula                  | markdown code              |     |
 | ----------- | ------------------------ | -------------------------- | --- |
 | Summation   | $\sum_{i=1}^{n} i$       | `$\sum_{i=1}^{n} i$`       |     |
 | Product     | $\prod_{i=1}^{n} i$      | `$\prod_{i=1}^{n} i$`      |     |
 | Integral    | $\int_{a}^{b} f(x) \,dx$ | `$\int_{a}^{b} f(x) \,dx$` |     |
 | Limit       | $\lim_{x\to\infty} f(x)$ | `$\lim_{x\to\infty} f(x)$` |     |
 
-#### **9. Other Mathematical Symbols**  
+#### **9. Other Mathematical Symbols**
 | Description       | Formula                                 | Markdown Code                               |     |
 | ----------------- | --------------------------------------- | ------------------------------------------- | --- |
 | Square Root       | $\sqrt{x}$                              | `$\sqrt{x}$`                                |     |
@@ -83,7 +82,7 @@
 
 ---
 
-### **Chinese-English Comparison Table (中英对照表)**  
+### **Chinese-English Comparison Table （中英对照表）**
 | English                  | 中文        |     |
 | ------------------------ | --------- | --- |
 | Addition                 | 加法        |     |
@@ -128,5 +127,4 @@
 | Floor & Ceiling          | 取整（向下、向上） |     |
 | Modulo                   | 取模        |     |
 
----
 
