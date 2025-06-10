@@ -271,3 +271,9 @@ tar -czvf filename.tar.gz filename
 btm # find cpu memory occupy
 htop # find detailed information
 ```
+
+## linux kernel
+
+```sh
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
