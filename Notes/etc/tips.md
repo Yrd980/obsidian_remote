@@ -83,6 +83,27 @@
 
 - **Refresh:** `:luafile %` or `:Lazy reload plugin-name` or `Lazy sync`
 
+#### close popup
+
+```sh
+
+local _select = vim.ui.select
+function vim.ui.select(items, opts, on_choice)
+    if
+        opts
+        and opts.prompt
+        and type(opts.prompt) == "string"
+        and string.match(opts.prompt, [[^You've reached.*limit.*Upgrade.*$]]) -- ...
+    then
+        vim.notify("Copilot: " .. opts.prompt, vim.log.levels.ERROR) --you can also delete this notify
+        vim.cmd("Copilot disable")
+    else
+        return _select(items, opts, on_choice)
+    end
+end
+
+
+```
 ## Ollama
 
 - **Update model**
