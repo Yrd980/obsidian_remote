@@ -83,6 +83,10 @@
 
 - **Refresh:** `:luafile %` or `:Lazy reload plugin-name` or `Lazy sync`
 
+### LSP
+
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
+
 #### close popup
 
 ```sh
