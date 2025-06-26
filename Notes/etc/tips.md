@@ -1,9 +1,9 @@
-
 # [!important] Shortcuts & Commands
 
 ## Obsidian
 
 ### Common Shortcuts
+
 - **Quick find file:** `Ctrl + O`
 - **Command template:** `Ctrl + P`
 - **Quick delete file:** Open command palette, search `Delete current file`
@@ -11,38 +11,54 @@
 - **Disable spell check:** Go to `Settings` → `Editor` → Disable `Spell check`
 
 ### Plugins
+
 - **Git**
 - **Linter**
 
 ### Git Commands
+
 - **Remove Ignored Files from Git Tracking:**
+
   ```sh
   git rm -r --cached .
   ```
+
 - **Export Git commit history:**
+
   ```sh
   git log --pretty=format:"%H|%an|%ad|%s" --date=iso > git-log-export.txt
   ```
+
 - **Initialize Git Repository:**
+
   ```sh
   git init
   ```
+
 - **Add Remote Repository:**
+
   ```sh
   git remote add origin https://github.com/your-username/your-repo.git
   ```
+
 - **Stage All Files:**
+
   ```sh
   git add .
   ```
+
 - **Commit Changes:**
+
   ```sh
   git commit -m "Initial commit"
   ```
+
 - **Push to Remote Repository (Main Branch):**
+
   ```sh
   git push -u origin main
   ```
+
 - **Push repo**
   - go to [token](https://github.com/settings/tokens) add then set repo permission
   - after git remote set-url origin https://<NEW-TOKEN>@github.com/
@@ -55,7 +71,6 @@
 | **Usage**      | Used to authenticate **you** to GitHub (e.g., for pushing code) | Used to prove that **a commit** or tag was made by you |
 | **Keys**       | SSH key pair (`id_rsa` / `id_ed25519`)                          | GPG key pair (used for signing)                        |
 | **Where used** | Cloning, pushing, fetching (i.e., repository access)            | Signing commits/tags (i.e., author authenticity)       |
-
 
 ## Zotero
 
@@ -70,9 +85,11 @@
 ### Tmux
 
 - **Capitalize first letter of each word in selection:** ([Reference](https://stackoverflow.com/questions/17440659/capitalize-first-letter-of-each-word-in-a-selection-using-vim))
+
   ```sh
   s/\<./\u&/g
   ```
+
 - **Document outline:** `<leader> + l + s`
 - **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
 - **Check function documentation:** `Shift + K`
@@ -108,9 +125,11 @@ end
 
 
 ```
+
 ## Ollama
 
 - **Update model**
+
 ```sh
 ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating model: {}"; ollama pull {}; echo "—" && echo "All models updated."
 ```
@@ -124,6 +143,7 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 ## JetBrains IDEs
 
 ### General Shortcuts
+
 - `Ctrl + Shift + A` → Find Action (search for commands/settings)
 - `Shift` (twice) → Search Everywhere
 - `Ctrl + E` → Recent Files
@@ -135,6 +155,7 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 - `Alt + Shift + ,` → Decrease font size
 
 ### Navigation
+
 - `Ctrl + N` → Go to Class
 - `Ctrl + Shift + N` → Go to File
 - `Ctrl + Alt + Shift + N` → Go to Symbol
@@ -143,6 +164,7 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 - `Ctrl + [ / Ctrl + ]` → Navigate to Code Block Start/End
 
 ### Editing
+
 - `Ctrl + W` → Expand Selection
 - `Ctrl + Shift + W` → Shrink Selection
 - `Ctrl + D` → Duplicate Line
@@ -152,12 +174,14 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 - `Ctrl + Shift + /` → Toggle Block Comment
 
 ### Refactoring
+
 - `Shift + F6` → Rename
 - `Ctrl + Alt + V` → Extract Variable
 - `Ctrl + Alt + M` → Extract Method
 - `Ctrl + Alt + F` → Extract Field
 
 ### Running & Debugging
+
 - `Shift + F10` → Run
 - `Shift + F9` → Debug
 - `F8` → Step Over
@@ -167,6 +191,7 @@ ollama ls | awk '{ print $1}' | grep -v NAME | xargs -I {} sh -c 'echo "Updating
 ## Qt
 
 **gcc and clang**
+
 ```sh
 cmake -B build -S . \
   -DCMAKE_C_COMPILER=clang \
@@ -189,6 +214,7 @@ Diagnostics:
 ## MPV
 
 ### **Playback Controls**
+
 - `SPACE` → Pause/Resume
 - `.` → Step forward one frame (pause mode)
 - `,` → Step backward one frame (pause mode)
@@ -200,17 +226,20 @@ Diagnostics:
 - `Backspace` → Restart video from beginning
 
 ### **Volume and Audio**
+
 - `9 / 0` → Decrease/Increase volume
 - `m` → Mute audio
 - `#` → Cycle through audio tracks
 
 ### **Subtitles**
+
 - `v` → Toggle subtitles
 - `j / J` → Cycle forward/backward through subtitle tracks
 - `z / Z` → Adjust subtitle delay (-/+ 0.1 sec)
 - `r / t` → Increase/Decrease subtitle size
 
 ### **Video Settings**
+
 - `f` → Toggle fullscreen
 - `o` → Show playback time & progress
 - `i` → Show video frame info
@@ -222,6 +251,7 @@ Diagnostics:
 - `Shift + s` → Screenshot without subtitles
 
 ### **Speed Control**
+
 - `[` → Decrease playback speed
 - `]` → Increase playback speed
 - `{` → Halve playback speed
@@ -229,12 +259,14 @@ Diagnostics:
 - `Backspace` → Reset playback speed
 
 ### **Looping and Playlist**
+
 - `l` → Toggle looping current file
 - `Shift + l` → Loop AB (start/end)
 - `>` → Next file in playlist
 - `<` → Previous file in playlist
 
 ### **Advanced**
+
 - `p` → Show playlist
 - `q` → Quit MPV
 - `Shift + q` → Quit and remember playback position
@@ -246,12 +278,15 @@ Diagnostics:
 - **change input:** Type ctrl + ` to select
 
 ### Moze (Japanese Input)
+
 - **Small characters:** Type `x` before the character (e.g., `x ょ` → `ょ`)
 - **Type ん：** Double `n`
 - **Transform あ->ア：** f6 or shift + alt then enter
 
 ### iwgtk (WiFi Management)
+
 - **Check WiFi passwords:**
+
   ```sh
   ls /var/lib/iwd
   ```
@@ -259,39 +294,51 @@ Diagnostics:
 ### Pacman (Arch Linux Package Manager)
 
 - **Manually install a package:**
+
   ```sh
   yay -G package
   updpkgsums
   makepkg -si
   ```
+
 - **Fix `yay` curl error (`HTTP server does not support byte ranges`):**
+
   ```sh
   yay -Scc
   ```
 
 ### Python
+
 - **Use `uv` instead of `conda`**
 - **Install PyTorch (CPU-only version):**
+
   ```sh
   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
   ```
 
 ### HP Printer Setup
+
 - [Arch Linux Installation Guide](https://unix.stackexchange.com/questions/359531/installing-hp-printer-driver-for-arch-linux)
 
 ### ffmpeg
+
 - **Merge mp4 and m4a**
+
 ```sh
 ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4
  ```
 
 ### tar
+
 - tar.gz
+
 ```sh
 tar -xzvf filename.tar.gz
 tar -czvf filename.tar.gz filename
 ```
+
 ### pid
+
 ```sh
 btm # find cpu memory occupy
 htop # find detailed information
