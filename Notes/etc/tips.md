@@ -90,11 +90,12 @@
   s/\<./\u&/g
   ```
 
-- **Document outline:** `<leader> + l + s`
 - **Toggle full pane in Tmux:** `<leader> + z` (toggle with same shortcut)
 - **Check function documentation:** `Shift + K`
 - **search current word:** `*`
 - **use ) to move mouse outside** `)`
+- **w go to next word start**
+- **capital w e b for space**
 
 ### Plugins
 
