@@ -96,6 +96,7 @@
 - **use ) to move mouse outside** `)`
 - **w go to next word start**
 - **capital w e b for space**
+- **snack manage buffer use** `ctrl + x`
 
 ### Plugins
 
