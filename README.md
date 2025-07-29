@@ -45,5 +45,3 @@ This vault is designed to:
 ## 🚀 Getting Started
 
 Browse through the folders based on your interests. The `Notes/` directory contains most of the structured technical content, while `Clippings/` offers curated external resources.
-
----

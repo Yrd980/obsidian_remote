@@ -21,6 +21,7 @@
 
   ```sh
   git rm -r --cached .
+  git log --reverse --oneline (get commit history)
   ```
 
 - **Export Git commit history:**
