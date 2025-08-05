@@ -98,6 +98,11 @@
 - **w go to next word start**
 - **capital w e b for space**
 - **snack manage buffer use** `ctrl + x`
+- **zf for fold**
+- **]] go to method**
+- **mark use ' to destination**
+- **sp and vsp**
+- **resize**
 
 ### Plugins
 
