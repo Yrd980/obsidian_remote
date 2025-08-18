@@ -17,6 +17,12 @@
 
 ### Git Commands
 
+- **Garbage Collection**
+
+  ```sh
+  git gc --aggressive --prune=now
+  ```
+
 - **Remove Ignored Files from Git Tracking:**
 
   ```sh
@@ -315,6 +321,12 @@ Diagnostics:
   yay -Scc
   ```
 
+- **Generate config**
+
+    ```sh
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    ```
+
 ### Python
 
 - **Use `uv` instead of `conda`**
@@ -357,6 +369,86 @@ htop # find detailed information
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+## computer
+
+### inxi -Fxz
+
+System:
+  Kernel: 6.17.0-rc1-1-mainline arch: x86_64 bits: 64 compiler: gcc v: 15.1.1
+  Desktop: KDE Plasma v: 6.4.4 Distro: Arch Linux
+Machine:
+  Type: Laptop System: HP product: HP ProBook 455 15.6 inch G9 Notebook PC
+    v: SBKPF,SBKPFV2 serial: <superuser required>
+  Mobo: HP model: 89C9 v: KBC Version 14.71.00 serial: <superuser required>
+    UEFI: HP v: U78 Ver. 01.19.00 date: 04/11/2025
+Battery:
+  ID-1: BAT0 charge: 34.0 Wh (95.5%) condition: 35.6/51.3 Wh (69.4%)
+    volts: 12.5 min: 11.6 model: Hewlett-Packard Primary status: charging
+CPU:
+  Info: 6-core model: AMD Ryzen 5 5625U with Radeon Graphics bits: 64
+    type: MT MCP arch: Zen 3 rev: 0 cache: L1: 384 KiB L2: 3 MiB L3: 16 MiB
+  Speed (MHz): avg: 2264 min/max: 423/4390 boost: enabled cores: 1: 2264
+    2: 2264 3: 2264 4: 2264 5: 2264 6: 2264 7: 2264 8: 2264 9: 2264 10: 2264
+    11: 2264 12: 2264 bogomips: 55095
+  Flags: avx avx2 ht lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm
+Graphics:
+  Device-1: Advanced Micro Devices [AMD/ATI] Barcelo vendor: Hewlett-Packard
+    driver: amdgpu v: kernel arch: GCN-5 bus-ID: 04:00.0 temp: 57.0 C
+  Device-2: Chicony HP HD Camera driver: uvcvideo type: USB bus-ID: 3-4:2
+  Display: wayland server: X.Org v: 24.1.8 with: Xwayland v: 24.1.8
+    compositor: kwin_wayland driver: X: loaded: amdgpu
+    unloaded: modesetting,radeon,vesa dri: radeonsi gpu: amdgpu
+    resolution: 1920x1080~60Hz
+  API: EGL v: 1.5 drivers: kms_swrast,radeonsi,swrast platforms:
+    active: gbm,wayland,x11,surfaceless,device inactive: N/A
+  API: OpenGL v: 4.6 compat-v: 4.5 vendor: amd mesa v: 25.2.0-cachyos1.1
+    glx-v: 1.4 direct-render: yes renderer: AMD Radeon Graphics (radeonsi
+    renoir ACO DRM 3.64 6.17.0-rc1-1-mainline)
+  API: Vulkan v: 1.4.321 drivers: radv surfaces: N/A devices: 1
+  Info: Tools: api: eglinfo, glxinfo, vulkaninfo
+    de: kscreen-console,kscreen-doctor x11: xdriinfo, xdpyinfo, xprop, xrandr
+Audio:
+  Device-1: Advanced Micro Devices [AMD/ATI] Renoir Radeon High Definition
+    Audio driver: snd_hda_intel v: kernel bus-ID: 04:00.1
+  Device-2: Advanced Micro Devices [AMD] Audio Coprocessor
+    vendor: Hewlett-Packard driver: N/A bus-ID: 04:00.5
+  Device-3: Advanced Micro Devices [AMD] Family 17h/19h/1ah HD Audio
+    vendor: Hewlett-Packard driver: snd_hda_intel v: kernel bus-ID: 04:00.6
+  API: ALSA v: k6.17.0-rc1-1-mainline status: kernel-api
+  Server-1: sndiod v: N/A status: off
+  Server-2: PipeWire v: 1.4.7 status: active
+Network:
+  Device-1: Realtek RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet
+    vendor: Hewlett-Packard driver: r8169 v: kernel port: 2000 bus-ID: 01:00.0
+  IF: enp1s0 state: down mac: <filter>
+  Device-2: Qualcomm QCNFA765 Wireless Network Adapter vendor: Foxconn
+    driver: ath11k_pci v: kernel bus-ID: 02:00.0
+  IF: wlan0 state: up mac: <filter>
+Bluetooth:
+  Device-1: Foxconn / Hon Hai driver: btusb v: 0.8 type: USB bus-ID: 1-3:2
+  Report: hciconfig ID: hci0 rfk-id: 2 state: up address: <filter> bt-v: 5.3
+    lmp-v: 12
+Drives:
+  Local Storage: total: 476.94 GiB used: 289.03 GiB (60.6%)
+  ID-1: /dev/nvme0n1 vendor: Samsung model: MZVLQ512HBLU-00BH1
+    size: 476.94 GiB temp: 77.8 C
+Partition:
+  ID-1: / size: 329.02 GiB used: 285.4 GiB (86.7%) fs: ext4
+    dev: /dev/nvme0n1p7
+  ID-2: /boot size: 798.4 MiB used: 312.6 MiB (39.2%) fs: vfat
+    dev: /dev/nvme0n1p5
+Swap:
+  ID-1: swap-1 type: partition size: 14.5 GiB used: 3.32 GiB (22.9%)
+    dev: /dev/nvme0n1p6
+Sensors:
+  System Temperatures: cpu: 62.0 C mobo: N/A gpu: amdgpu temp: 57.0 C
+  Fan Speeds (rpm): N/A
+Info:
+  Memory: total: 16 GiB note: est. available: 14.93 GiB used: 5.09 GiB (34.1%)
+  Processes: 367 Uptime: 1d 2h 37m Init: systemd
+  Packages: 2047 Compilers: clang: 20.1.8 gcc: 15.2.1 Shell: fish v: 4.0.2
+    inxi: 3.3.38
 
 ### ChatGPT
 
