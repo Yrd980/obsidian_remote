@@ -36,48 +36,13 @@
   git log --pretty=format:"%H|%an|%ad|%s" --date=iso > git-log-export.txt
   ```
 
-- **Initialize Git Repository:**
+- **Delete SecretKey**
 
-  ```sh
-  git init
+  ```sh  
+  git grep -n --full-name -e 'ghp_' $(git rev-list --all) || true
+  sudo pacman -S git-filter-repo
+  git filter-repo --path LEAKED_PATH --invert-paths
   ```
-
-- **Add Remote Repository:**
-
-  ```sh
-  git remote add origin https://github.com/your-username/your-repo.git
-  ```
-
-- **Stage All Files:**
-
-  ```sh
-  git add .
-  ```
-
-- **Commit Changes:**
-
-  ```sh
-  git commit -m "Initial commit"
-  ```
-
-- **Push to Remote Repository (Main Branch):**
-
-  ```sh
-  git push -u origin main
-  ```
-
-- **Push repo**
-  - go to [token](https://github.com/settings/tokens) add then set repo permission
-  - after git remote set-url origin https://<NEW-TOKEN>@github.com/
-
-- **difference**
-
-| Feature        | **SSH**                                                         | **GPG**                                                |
-| -------------- | --------------------------------------------------------------- | ------------------------------------------------------ |
-| **Purpose**    | Secure login/authentication                                     | Verifying commit authorship                            |
-| **Usage**      | Used to authenticate **you** to GitHub (e.g., for pushing code) | Used to prove that **a commit** or tag was made by you |
-| **Keys**       | SSH key pair (`id_rsa` / `id_ed25519`)                          | GPG key pair (used for signing)                        |
-| **Where used** | Cloning, pushing, fetching (i.e., repository access)            | Signing commits/tags (i.e., author authenticity)       |
 
 ## Zotero
 
